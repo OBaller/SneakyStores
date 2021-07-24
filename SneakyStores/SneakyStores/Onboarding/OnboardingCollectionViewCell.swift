@@ -8,6 +8,8 @@
 import UIKit
 
 class OnboardingCollectionViewCell: UICollectionViewCell {
+    static let identifier = "OnboardingCollectionViewCell"
+    
     @IBOutlet weak var slideImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

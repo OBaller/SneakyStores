@@ -17,6 +17,8 @@
 		189EAA8D26AC04D4005B946B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189EAA8C26AC04D4005B946B /* GoogleService-Info.plist */; };
 		189EAA8F26AC061D005B946B /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA8E26AC061D005B946B /* OnboardingCollectionViewCell.swift */; };
 		189EAA9126AC0D41005B946B /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */; };
+		189EAA9826AC51F6005B946B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9726AC51F6005B946B /* LoginViewController.swift */; };
+		189EAA9A26AC521F005B946B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9926AC521F005B946B /* SignupViewController.swift */; };
 		480DDDD4550AFF51B777AFA4 /* Pods_SneakyStores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF21425E3C83B99A20F741C /* Pods_SneakyStores.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		189EAA8C26AC04D4005B946B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		189EAA8E26AC061D005B946B /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		189EAA9726AC51F6005B946B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		189EAA9926AC521F005B946B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		7549B351E3627B9EDF5F31FB /* Pods-SneakyStores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakyStores.release.xcconfig"; path = "Target Support Files/Pods-SneakyStores/Pods-SneakyStores.release.xcconfig"; sourceTree = "<group>"; };
 		7CF21425E3C83B99A20F741C /* Pods_SneakyStores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SneakyStores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D0E9505D65820D090D9378 /* Pods-SneakyStores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakyStores.debug.xcconfig"; path = "Target Support Files/Pods-SneakyStores/Pods-SneakyStores.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,19 +75,37 @@
 		189EAA7326AB80A9005B946B /* SneakyStores */ = {
 			isa = PBXGroup;
 			children = (
+				189EAA9426AC5118005B946B /* Authentications */,
 				189EAA7426AB80A9005B946B /* AppDelegate.swift */,
 				189EAA7626AB80A9005B946B /* SceneDelegate.swift */,
-				189EAA7826AB80A9005B946B /* ViewController.swift */,
-				189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */,
-				189EAA8E26AC061D005B946B /* OnboardingCollectionViewCell.swift */,
-				189EAA8A26ABF729005B946B /* OnboardingSlides.swift */,
-				189EAA7A26AB80A9005B946B /* Main.storyboard */,
+				189EAA9326AC4F1D005B946B /* Onboarding */,
 				189EAA7D26AB80AC005B946B /* Assets.xcassets */,
 				189EAA7F26AB80AC005B946B /* LaunchScreen.storyboard */,
 				189EAA8226AB80AC005B946B /* Info.plist */,
 				189EAA8C26AC04D4005B946B /* GoogleService-Info.plist */,
 			);
 			path = SneakyStores;
+			sourceTree = "<group>";
+		};
+		189EAA9326AC4F1D005B946B /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				189EAA7826AB80A9005B946B /* ViewController.swift */,
+				189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */,
+				189EAA8E26AC061D005B946B /* OnboardingCollectionViewCell.swift */,
+				189EAA8A26ABF729005B946B /* OnboardingSlides.swift */,
+				189EAA7A26AB80A9005B946B /* Main.storyboard */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		189EAA9426AC5118005B946B /* Authentications */ = {
+			isa = PBXGroup;
+			children = (
+				189EAA9726AC51F6005B946B /* LoginViewController.swift */,
+				189EAA9926AC521F005B946B /* SignupViewController.swift */,
+			);
+			path = Authentications;
 			sourceTree = "<group>";
 		};
 		6C3E16B755BFCC76B08D005D /* Pods */ = {
@@ -218,7 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189EAA9826AC51F6005B946B /* LoginViewController.swift in Sources */,
 				189EAA8B26ABF729005B946B /* OnboardingSlides.swift in Sources */,
+				189EAA9A26AC521F005B946B /* SignupViewController.swift in Sources */,
 				189EAA9126AC0D41005B946B /* OnboardingViewModel.swift in Sources */,
 				189EAA7926AB80A9005B946B /* ViewController.swift in Sources */,
 				189EAA8F26AC061D005B946B /* OnboardingCollectionViewCell.swift in Sources */,
