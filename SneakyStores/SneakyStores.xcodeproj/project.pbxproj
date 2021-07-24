@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		189EAA7C26AB80A9005B946B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189EAA7A26AB80A9005B946B /* Main.storyboard */; };
 		189EAA7E26AB80AC005B946B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189EAA7D26AB80AC005B946B /* Assets.xcassets */; };
 		189EAA8126AB80AC005B946B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189EAA7F26AB80AC005B946B /* LaunchScreen.storyboard */; };
+		189EAA8B26ABF729005B946B /* OnboardingSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA8A26ABF729005B946B /* OnboardingSlides.swift */; };
+		189EAA8D26AC04D4005B946B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189EAA8C26AC04D4005B946B /* GoogleService-Info.plist */; };
+		189EAA8F26AC061D005B946B /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA8E26AC061D005B946B /* OnboardingCollectionViewCell.swift */; };
+		189EAA9126AC0D41005B946B /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */; };
 		480DDDD4550AFF51B777AFA4 /* Pods_SneakyStores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF21425E3C83B99A20F741C /* Pods_SneakyStores.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		189EAA7D26AB80AC005B946B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189EAA8026AB80AC005B946B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		189EAA8226AB80AC005B946B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189EAA8A26ABF729005B946B /* OnboardingSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlides.swift; sourceTree = "<group>"; };
+		189EAA8C26AC04D4005B946B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		189EAA8E26AC061D005B946B /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		7549B351E3627B9EDF5F31FB /* Pods-SneakyStores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakyStores.release.xcconfig"; path = "Target Support Files/Pods-SneakyStores/Pods-SneakyStores.release.xcconfig"; sourceTree = "<group>"; };
 		7CF21425E3C83B99A20F741C /* Pods_SneakyStores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SneakyStores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D0E9505D65820D090D9378 /* Pods-SneakyStores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakyStores.debug.xcconfig"; path = "Target Support Files/Pods-SneakyStores/Pods-SneakyStores.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,10 +74,14 @@
 				189EAA7426AB80A9005B946B /* AppDelegate.swift */,
 				189EAA7626AB80A9005B946B /* SceneDelegate.swift */,
 				189EAA7826AB80A9005B946B /* ViewController.swift */,
+				189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */,
+				189EAA8E26AC061D005B946B /* OnboardingCollectionViewCell.swift */,
+				189EAA8A26ABF729005B946B /* OnboardingSlides.swift */,
 				189EAA7A26AB80A9005B946B /* Main.storyboard */,
 				189EAA7D26AB80AC005B946B /* Assets.xcassets */,
 				189EAA7F26AB80AC005B946B /* LaunchScreen.storyboard */,
 				189EAA8226AB80AC005B946B /* Info.plist */,
+				189EAA8C26AC04D4005B946B /* GoogleService-Info.plist */,
 			);
 			path = SneakyStores;
 			sourceTree = "<group>";
@@ -80,7 +92,6 @@
 				86D0E9505D65820D090D9378 /* Pods-SneakyStores.debug.xcconfig */,
 				7549B351E3627B9EDF5F31FB /* Pods-SneakyStores.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				189EAA8126AB80AC005B946B /* LaunchScreen.storyboard in Resources */,
+				189EAA8D26AC04D4005B946B /* GoogleService-Info.plist in Resources */,
 				189EAA7E26AB80AC005B946B /* Assets.xcassets in Resources */,
 				189EAA7C26AB80A9005B946B /* Main.storyboard in Resources */,
 			);
@@ -206,7 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189EAA8B26ABF729005B946B /* OnboardingSlides.swift in Sources */,
+				189EAA9126AC0D41005B946B /* OnboardingViewModel.swift in Sources */,
 				189EAA7926AB80A9005B946B /* ViewController.swift in Sources */,
+				189EAA8F26AC061D005B946B /* OnboardingCollectionViewCell.swift in Sources */,
 				189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */,
 				189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */,
 			);
