@@ -19,6 +19,8 @@
 		189EAA9126AC0D41005B946B /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */; };
 		189EAA9826AC51F6005B946B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9726AC51F6005B946B /* LoginViewController.swift */; };
 		189EAA9A26AC521F005B946B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9926AC521F005B946B /* SignupViewController.swift */; };
+		189EAA9D26AC6757005B946B /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9C26AC6757005B946B /* UIView + Extension.swift */; };
+		189EAA9F26AC6797005B946B /* TextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA9E26AC6797005B946B /* TextField + Extension.swift */; };
 		480DDDD4550AFF51B777AFA4 /* Pods_SneakyStores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF21425E3C83B99A20F741C /* Pods_SneakyStores.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		189EAA9026AC0D41005B946B /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		189EAA9726AC51F6005B946B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		189EAA9926AC521F005B946B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		189EAA9C26AC6757005B946B /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		189EAA9E26AC6797005B946B /* TextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField + Extension.swift"; sourceTree = "<group>"; };
 		7549B351E3627B9EDF5F31FB /* Pods-SneakyStores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakyStores.release.xcconfig"; path = "Target Support Files/Pods-SneakyStores/Pods-SneakyStores.release.xcconfig"; sourceTree = "<group>"; };
 		7CF21425E3C83B99A20F741C /* Pods_SneakyStores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SneakyStores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D0E9505D65820D090D9378 /* Pods-SneakyStores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakyStores.debug.xcconfig"; path = "Target Support Files/Pods-SneakyStores/Pods-SneakyStores.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 		189EAA7326AB80A9005B946B /* SneakyStores */ = {
 			isa = PBXGroup;
 			children = (
+				189EAA9B26AC673A005B946B /* Extensions */,
 				189EAA9426AC5118005B946B /* Authentications */,
 				189EAA7426AB80A9005B946B /* AppDelegate.swift */,
 				189EAA7626AB80A9005B946B /* SceneDelegate.swift */,
@@ -106,6 +111,15 @@
 				189EAA9926AC521F005B946B /* SignupViewController.swift */,
 			);
 			path = Authentications;
+			sourceTree = "<group>";
+		};
+		189EAA9B26AC673A005B946B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				189EAA9C26AC6757005B946B /* UIView + Extension.swift */,
+				189EAA9E26AC6797005B946B /* TextField + Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		6C3E16B755BFCC76B08D005D /* Pods */ = {
@@ -248,6 +262,8 @@
 				189EAA8F26AC061D005B946B /* OnboardingCollectionViewCell.swift in Sources */,
 				189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */,
 				189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */,
+				189EAA9D26AC6757005B946B /* UIView + Extension.swift in Sources */,
+				189EAA9F26AC6797005B946B /* TextField + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
