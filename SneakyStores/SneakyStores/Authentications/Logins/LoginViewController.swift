@@ -12,10 +12,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var eyeButton: UIButton!
     
+    private let viewModel = LoginViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setNavBar()
+        emailField.becomeFirstResponder()
     }
     
     @IBAction func secureButtonPressed(_ sender: UIButton) {
@@ -25,7 +27,19 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
-        
+        if let email = emailField.text, let pass = passwordField.text,
+           !email.isEmpty, !pass.isEmpty {
+            HUD.show(status: "Signing you in...")
+            viewModel.loginUser(with: email, password: pass) { [weak self] success in
+                HUD.hide()
+                success ? self?.navigateToHome() : self?
+                    .showAlert(alertText: "Incorrect Details",
+                               alertMessage: "Incorrect email or password. Please check your details and try again.")
+            }
+        } else {
+            HUD.hide()
+            self.showAlert(alertText: "Incomplete details", alertMessage: "Please, enter your email and password.")
+        }
     }
     
     @IBAction func signupPressed(_ sender: UIButton) {
