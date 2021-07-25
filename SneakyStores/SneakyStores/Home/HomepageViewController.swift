@@ -8,12 +8,19 @@
 import UIKit
 
 class HomepageViewController: UIViewController {
-
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var searchTextField: PaddedTextField!
+    @IBOutlet weak var notificationButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemGray6
     }
     
 
+    @IBAction func notificationButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+    }
 }
