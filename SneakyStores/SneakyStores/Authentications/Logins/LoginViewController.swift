@@ -29,15 +29,12 @@ class LoginViewController: UIViewController {
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailField.text, let pass = passwordField.text,
            !email.isEmpty, !pass.isEmpty {
-            HUD.show(status: "Signing you in...")
             viewModel.loginUser(with: email, password: pass) { [weak self] success in
-                HUD.hide()
                 success ? self?.navigateToHome() : self?
                     .showAlert(alertText: "Incorrect Details",
                                alertMessage: "Incorrect email or password. Please check your details and try again.")
             }
         } else {
-            HUD.hide()
             self.showAlert(alertText: "Incomplete details", alertMessage: "Please, enter your email and password.")
         }
     }

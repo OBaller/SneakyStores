@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1812EE7B26ADCCE500695B0D /* SeemoreSneakers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1812EE7A26ADCCE500695B0D /* SeemoreSneakers.storyboard */; };
+		1812EE7D26ADCD0400695B0D /* SeemoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EE7C26ADCD0400695B0D /* SeemoreViewController.swift */; };
 		189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7426AB80A9005B946B /* AppDelegate.swift */; };
 		189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7626AB80A9005B946B /* SceneDelegate.swift */; };
 		189EAA7926AB80A9005B946B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7826AB80A9005B946B /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1812EE7A26ADCCE500695B0D /* SeemoreSneakers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeemoreSneakers.storyboard; sourceTree = "<group>"; };
+		1812EE7C26ADCD0400695B0D /* SeemoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeemoreViewController.swift; sourceTree = "<group>"; };
 		189EAA7126AB80A9005B946B /* SneakyStores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakyStores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189EAA7426AB80A9005B946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189EAA7626AB80A9005B946B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1812EE7926ADCCC500695B0D /* SeeMore */ = {
+			isa = PBXGroup;
+			children = (
+				1812EE7A26ADCCE500695B0D /* SeemoreSneakers.storyboard */,
+				1812EE7C26ADCD0400695B0D /* SeemoreViewController.swift */,
+			);
+			path = SeeMore;
+			sourceTree = "<group>";
+		};
+		1812EE7E26ADE3CB00695B0D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				189EAA7426AB80A9005B946B /* AppDelegate.swift */,
+				189EAA7626AB80A9005B946B /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		189EAA6826AB80A9005B946B = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +123,13 @@
 		189EAA7326AB80A9005B946B /* SneakyStores */ = {
 			isa = PBXGroup;
 			children = (
+				1812EE7E26ADE3CB00695B0D /* Delegates */,
+				189EAA9426AC5118005B946B /* Authentications */,
+				189EAA9326AC4F1D005B946B /* Onboarding */,
+				1812EE7926ADCCC500695B0D /* SeeMore */,
 				189EAAB026AD6EE7005B946B /* Home */,
 				189EAA7A26AB80A9005B946B /* Main.storyboard */,
 				189EAA9B26AC673A005B946B /* Extensions */,
-				189EAA9426AC5118005B946B /* Authentications */,
-				189EAA7426AB80A9005B946B /* AppDelegate.swift */,
-				189EAA7626AB80A9005B946B /* SceneDelegate.swift */,
-				189EAA9326AC4F1D005B946B /* Onboarding */,
 				189EAA7D26AB80AC005B946B /* Assets.xcassets */,
 				189EAA7F26AB80AC005B946B /* LaunchScreen.storyboard */,
 				189EAA8226AB80AC005B946B /* Info.plist */,
@@ -255,6 +277,7 @@
 				189EAA8126AB80AC005B946B /* LaunchScreen.storyboard in Resources */,
 				189EAA8D26AC04D4005B946B /* GoogleService-Info.plist in Resources */,
 				189EAAB226AD6F04005B946B /* Homepage.storyboard in Resources */,
+				1812EE7B26ADCCE500695B0D /* SeemoreSneakers.storyboard in Resources */,
 				189EAA7E26AB80AC005B946B /* Assets.xcassets in Resources */,
 				189EAA7C26AB80A9005B946B /* Main.storyboard in Resources */,
 			);
@@ -318,6 +341,7 @@
 				189EAAA826ACCA3F005B946B /* ViewController + Extension.swift in Sources */,
 				189EAA7926AB80A9005B946B /* ViewController.swift in Sources */,
 				189EAAAF26ACCDD7005B946B /* LoginViewModel.swift in Sources */,
+				1812EE7D26ADCD0400695B0D /* SeemoreViewController.swift in Sources */,
 				189EAABA26AD734F005B946B /* ProfileViewController.swift in Sources */,
 				189EAAAA26ACCC86005B946B /* HUD.swift in Sources */,
 				189EAA8F26AC061D005B946B /* OnboardingCollectionViewCell.swift in Sources */,

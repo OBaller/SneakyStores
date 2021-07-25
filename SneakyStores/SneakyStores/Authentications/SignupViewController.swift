@@ -55,7 +55,7 @@ class SignupViewController: UIViewController {
     
     @IBAction func registerPressed(_ sender: UIButton) {
         validateTextField()
-        HUD.show(status: "Just a second...")
+       // HUD.show(status: "Just a second...")
         if let email = emailField.text, let password = passwordField.text, let fullName = fullNameField.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error, authResult != nil {
@@ -67,11 +67,11 @@ class SignupViewController: UIViewController {
                         ["email": email, "fullName": fullName,
                          "address": "Update your address", "phoneNumber": "Update Phone Number"]) { (error) in
                         if error != nil {
-                            HUD.hide()
+                           // HUD.hide()
                             self.showAlert(alertText: "Error",
                                            alertMessage: "There was an error creating account, please try again.")
                         } else {
-                            HUD.hide()
+                           // HUD.hide()
                             let alertController =
                             UIAlertController(title: "Done",
                                               message: "Account created successfully!", preferredStyle: .alert)

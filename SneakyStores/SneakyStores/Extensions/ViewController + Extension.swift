@@ -25,9 +25,9 @@ extension UIViewController {
     }
     
     func navigateToHome() {
-        let newStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let controller = newStoryboard
-            .instantiateViewController(identifier: "HomeTabBarNav") as UITabBarController
+        let newStoryboard = UIStoryboard(name: "Homepage", bundle: nil)
+        guard let controller = newStoryboard
+                .instantiateViewController(identifier: "HomeTabBarNav") as? UITabBarController else {return}
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve
         present(controller, animated: true, completion: nil)
