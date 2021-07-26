@@ -124,6 +124,7 @@
                     <connections>
                         <outlet property="notificationButton" destination="TGf-ls-kRI" id="s4B-Ry-Nru"/>
                         <outlet property="searchTextField" destination="Fwu-nf-NfZ" id="NuC-Iu-Z6E"/>
+                        <outlet property="sneakersCollectionView" destination="IF4-41-oxy" id="3TI-IN-rGi"/>
                         <outlet property="userImage" destination="07g-Lb-tK3" id="yHd-pE-2rX"/>
                         <outlet property="userName" destination="QW8-Zm-yH2" id="jti-r1-peb"/>
                     </connections>

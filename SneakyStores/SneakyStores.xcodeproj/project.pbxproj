@@ -11,6 +11,15 @@
 		1812EE7D26ADCD0400695B0D /* SeemoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EE7C26ADCD0400695B0D /* SeemoreViewController.swift */; };
 		1812EEC826AEDD3500695B0D /* ForyouCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEC626AEDD3500695B0D /* ForyouCollectionViewCell.swift */; };
 		1812EEC926AEDD3500695B0D /* ForyouCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1812EEC726AEDD3500695B0D /* ForyouCollectionViewCell.xib */; };
+		1812EECC26AEDEFD00695B0D /* SneakersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EECA26AEDEFD00695B0D /* SneakersCollectionViewCell.swift */; };
+		1812EECD26AEDEFD00695B0D /* SneakersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1812EECB26AEDEFD00695B0D /* SneakersCollectionViewCell.xib */; };
+		1812EED126AEDF7500695B0D /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EECF26AEDF7500695B0D /* HeaderCollectionViewCell.swift */; };
+		1812EED226AEDF7500695B0D /* HeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1812EED026AEDF7500695B0D /* HeaderCollectionViewCell.xib */; };
+		1812EED726AF032300695B0D /* HeaderCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EED626AF032300695B0D /* HeaderCollectionViewController.swift */; };
+		1812EED926AF038C00695B0D /* HorinzontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EED826AF038C00695B0D /* HorinzontalSnappingController.swift */; };
+		1812EEDB26AF042900695B0D /* ShoeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEDA26AF042900695B0D /* ShoeHeaderCell.swift */; };
+		1812EEDD26AF051D00695B0D /* UIView + Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEDC26AF051D00695B0D /* UIView + Layout.swift */; };
+		1812EEDF26AF058900695B0D /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEDE26AF058900695B0D /* HorizontalStackView.swift */; };
 		189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7426AB80A9005B946B /* AppDelegate.swift */; };
 		189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7626AB80A9005B946B /* SceneDelegate.swift */; };
 		189EAA7926AB80A9005B946B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7826AB80A9005B946B /* ViewController.swift */; };
@@ -44,6 +53,15 @@
 		1812EE7C26ADCD0400695B0D /* SeemoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeemoreViewController.swift; sourceTree = "<group>"; };
 		1812EEC626AEDD3500695B0D /* ForyouCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForyouCollectionViewCell.swift; sourceTree = "<group>"; };
 		1812EEC726AEDD3500695B0D /* ForyouCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForyouCollectionViewCell.xib; sourceTree = "<group>"; };
+		1812EECA26AEDEFD00695B0D /* SneakersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersCollectionViewCell.swift; sourceTree = "<group>"; };
+		1812EECB26AEDEFD00695B0D /* SneakersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SneakersCollectionViewCell.xib; sourceTree = "<group>"; };
+		1812EECF26AEDF7500695B0D /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		1812EED026AEDF7500695B0D /* HeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		1812EED626AF032300695B0D /* HeaderCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewController.swift; sourceTree = "<group>"; };
+		1812EED826AF038C00695B0D /* HorinzontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorinzontalSnappingController.swift; sourceTree = "<group>"; };
+		1812EEDA26AF042900695B0D /* ShoeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeHeaderCell.swift; sourceTree = "<group>"; };
+		1812EEDC26AF051D00695B0D /* UIView + Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Layout.swift"; sourceTree = "<group>"; };
+		1812EEDE26AF058900695B0D /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		189EAA7126AB80A9005B946B /* SneakyStores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakyStores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189EAA7426AB80A9005B946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189EAA7626AB80A9005B946B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,8 +130,28 @@
 				189EAAB326AD72F4005B946B /* HomepageViewController.swift */,
 				1812EEC626AEDD3500695B0D /* ForyouCollectionViewCell.swift */,
 				1812EEC726AEDD3500695B0D /* ForyouCollectionViewCell.xib */,
+				1812EECA26AEDEFD00695B0D /* SneakersCollectionViewCell.swift */,
+				1812EECB26AEDEFD00695B0D /* SneakersCollectionViewCell.xib */,
 			);
 			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		1812EECE26AEDF3800695B0D /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				1812EECF26AEDF7500695B0D /* HeaderCollectionViewCell.swift */,
+				1812EED026AEDF7500695B0D /* HeaderCollectionViewCell.xib */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		1812EED326AF01F500695B0D /* SneakersHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				1812EED626AF032300695B0D /* HeaderCollectionViewController.swift */,
+				1812EEDA26AF042900695B0D /* ShoeHeaderCell.swift */,
+			);
+			path = SneakersHeaderCell;
 			sourceTree = "<group>";
 		};
 		189EAA6826AB80A9005B946B = {
@@ -181,6 +219,9 @@
 				189EAAA326ACC85A005B946B /* Validation + Extension.swift */,
 				189EAAA726ACCA3F005B946B /* ViewController + Extension.swift */,
 				189EAAA926ACCC86005B946B /* HUD.swift */,
+				1812EED826AF038C00695B0D /* HorinzontalSnappingController.swift */,
+				1812EEDC26AF051D00695B0D /* UIView + Layout.swift */,
+				1812EEDE26AF058900695B0D /* HorizontalStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +242,8 @@
 				189EAAB526AD730A005B946B /* FaveSneakersViewController.swift */,
 				189EAAB726AD7331005B946B /* CartViewController.swift */,
 				189EAAB926AD734F005B946B /* ProfileViewController.swift */,
+				1812EED326AF01F500695B0D /* SneakersHeaderCell */,
+				1812EECE26AEDF3800695B0D /* HeaderView */,
 				1812EEC526AEDBF000695B0D /* HomeTab */,
 			);
 			path = Home;
@@ -290,8 +333,10 @@
 			files = (
 				189EAA8126AB80AC005B946B /* LaunchScreen.storyboard in Resources */,
 				1812EEC926AEDD3500695B0D /* ForyouCollectionViewCell.xib in Resources */,
+				1812EECD26AEDEFD00695B0D /* SneakersCollectionViewCell.xib in Resources */,
 				189EAA8D26AC04D4005B946B /* GoogleService-Info.plist in Resources */,
 				189EAAB226AD6F04005B946B /* Homepage.storyboard in Resources */,
+				1812EED226AEDF7500695B0D /* HeaderCollectionViewCell.xib in Resources */,
 				1812EE7B26ADCCE500695B0D /* SeemoreSneakers.storyboard in Resources */,
 				189EAA7E26AB80AC005B946B /* Assets.xcassets in Resources */,
 				189EAA7C26AB80A9005B946B /* Main.storyboard in Resources */,
@@ -354,9 +399,13 @@
 				189EAA9A26AC521F005B946B /* SignupViewController.swift in Sources */,
 				189EAA9126AC0D41005B946B /* OnboardingViewModel.swift in Sources */,
 				189EAAA826ACCA3F005B946B /* ViewController + Extension.swift in Sources */,
+				1812EEDB26AF042900695B0D /* ShoeHeaderCell.swift in Sources */,
 				189EAA7926AB80A9005B946B /* ViewController.swift in Sources */,
+				1812EECC26AEDEFD00695B0D /* SneakersCollectionViewCell.swift in Sources */,
 				189EAAAF26ACCDD7005B946B /* LoginViewModel.swift in Sources */,
+				1812EEDF26AF058900695B0D /* HorizontalStackView.swift in Sources */,
 				1812EE7D26ADCD0400695B0D /* SeemoreViewController.swift in Sources */,
+				1812EED726AF032300695B0D /* HeaderCollectionViewController.swift in Sources */,
 				189EAABA26AD734F005B946B /* ProfileViewController.swift in Sources */,
 				189EAAAA26ACCC86005B946B /* HUD.swift in Sources */,
 				189EAA8F26AC061D005B946B /* OnboardingCollectionViewCell.swift in Sources */,
@@ -364,9 +413,12 @@
 				1812EEC826AEDD3500695B0D /* ForyouCollectionViewCell.swift in Sources */,
 				189EAAB426AD72F4005B946B /* HomepageViewController.swift in Sources */,
 				189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */,
+				1812EED126AEDF7500695B0D /* HeaderCollectionViewCell.swift in Sources */,
+				1812EED926AF038C00695B0D /* HorinzontalSnappingController.swift in Sources */,
 				189EAA9D26AC6757005B946B /* UIView + Extension.swift in Sources */,
 				189EAA9F26AC6797005B946B /* TextField + Extension.swift in Sources */,
 				189EAAB826AD7331005B946B /* CartViewController.swift in Sources */,
+				1812EEDD26AF051D00695B0D /* UIView + Layout.swift in Sources */,
 				189EAAB626AD730A005B946B /* FaveSneakersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

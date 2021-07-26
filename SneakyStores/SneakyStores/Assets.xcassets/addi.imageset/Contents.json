@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "addi.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "snik.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
