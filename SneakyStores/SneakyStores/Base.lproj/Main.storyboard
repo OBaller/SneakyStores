@@ -145,7 +145,7 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjg-5w-T7r" customClass="PaddedTextField" customModule="SneakyStores" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="toluade@gmail.com" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjg-5w-T7r" customClass="PaddedTextField" customModule="SneakyStores" customModuleProvider="target">
                                 <rect key="frame" x="32" y="176" width="350" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -159,7 +159,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zi7-EV-smc" customClass="PaddedTextField" customModule="SneakyStores" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="qwerty12345" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zi7-EV-smc" customClass="PaddedTextField" customModule="SneakyStores" customModuleProvider="target">
                                 <rect key="frame" x="32" y="276" width="350" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1812EE7B26ADCCE500695B0D /* SeemoreSneakers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1812EE7A26ADCCE500695B0D /* SeemoreSneakers.storyboard */; };
 		1812EE7D26ADCD0400695B0D /* SeemoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EE7C26ADCD0400695B0D /* SeemoreViewController.swift */; };
+		1812EEC826AEDD3500695B0D /* ForyouCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEC626AEDD3500695B0D /* ForyouCollectionViewCell.swift */; };
+		1812EEC926AEDD3500695B0D /* ForyouCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1812EEC726AEDD3500695B0D /* ForyouCollectionViewCell.xib */; };
 		189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7426AB80A9005B946B /* AppDelegate.swift */; };
 		189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7626AB80A9005B946B /* SceneDelegate.swift */; };
 		189EAA7926AB80A9005B946B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7826AB80A9005B946B /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		1812EE7A26ADCCE500695B0D /* SeemoreSneakers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeemoreSneakers.storyboard; sourceTree = "<group>"; };
 		1812EE7C26ADCD0400695B0D /* SeemoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeemoreViewController.swift; sourceTree = "<group>"; };
+		1812EEC626AEDD3500695B0D /* ForyouCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForyouCollectionViewCell.swift; sourceTree = "<group>"; };
+		1812EEC726AEDD3500695B0D /* ForyouCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForyouCollectionViewCell.xib; sourceTree = "<group>"; };
 		189EAA7126AB80A9005B946B /* SneakyStores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakyStores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189EAA7426AB80A9005B946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189EAA7626AB80A9005B946B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,16 @@
 				189EAA7626AB80A9005B946B /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		1812EEC526AEDBF000695B0D /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				189EAAB326AD72F4005B946B /* HomepageViewController.swift */,
+				1812EEC626AEDD3500695B0D /* ForyouCollectionViewCell.swift */,
+				1812EEC726AEDD3500695B0D /* ForyouCollectionViewCell.xib */,
+			);
+			path = HomeTab;
 			sourceTree = "<group>";
 		};
 		189EAA6826AB80A9005B946B = {
@@ -184,10 +198,10 @@
 			isa = PBXGroup;
 			children = (
 				189EAAB126AD6F04005B946B /* Homepage.storyboard */,
-				189EAAB326AD72F4005B946B /* HomepageViewController.swift */,
 				189EAAB526AD730A005B946B /* FaveSneakersViewController.swift */,
 				189EAAB726AD7331005B946B /* CartViewController.swift */,
 				189EAAB926AD734F005B946B /* ProfileViewController.swift */,
+				1812EEC526AEDBF000695B0D /* HomeTab */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -275,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				189EAA8126AB80AC005B946B /* LaunchScreen.storyboard in Resources */,
+				1812EEC926AEDD3500695B0D /* ForyouCollectionViewCell.xib in Resources */,
 				189EAA8D26AC04D4005B946B /* GoogleService-Info.plist in Resources */,
 				189EAAB226AD6F04005B946B /* Homepage.storyboard in Resources */,
 				1812EE7B26ADCCE500695B0D /* SeemoreSneakers.storyboard in Resources */,
@@ -346,6 +361,7 @@
 				189EAAAA26ACCC86005B946B /* HUD.swift in Sources */,
 				189EAA8F26AC061D005B946B /* OnboardingCollectionViewCell.swift in Sources */,
 				189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */,
+				1812EEC826AEDD3500695B0D /* ForyouCollectionViewCell.swift in Sources */,
 				189EAAB426AD72F4005B946B /* HomepageViewController.swift in Sources */,
 				189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */,
 				189EAA9D26AC6757005B946B /* UIView + Extension.swift in Sources */,
