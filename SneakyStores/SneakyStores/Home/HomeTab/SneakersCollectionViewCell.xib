@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SneakersCollectionViewCell" customModule="SneakyStores" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SneakersCollectionViewCell" id="gTV-IL-0wX" customClass="SneakersCollectionViewCell" customModule="SneakyStores" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="160" height="194"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -20,65 +20,111 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwb-fi-cAX">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="194"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="R0f-jE-Wpb">
-                                <rect key="frame" x="8" y="15" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-mB-0eQ">
-                                <rect key="frame" x="120" y="14" width="28" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="heart" catalog="system"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="faveImageButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="cop-3Z-iv3"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mens" translatesAutoresizingMaskIntoConstraints="NO" id="uV3-Nc-KAI">
-                                <rect key="frame" x="8" y="44" width="144" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="9Iz-0P-caQ">
+                                <rect key="frame" x="8" y="15" width="132.5" height="21"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="R0f-jE-Wpb">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="PPQ-5l-KMH"/>
+                                            <constraint firstAttribute="height" constant="21" id="s9U-LS-b5C"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-mB-0eQ">
+                                        <rect key="frame" x="112" y="0.0" width="20.5" height="21"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="irn-8j-Q5t"/>
+                                            <constraint firstAttribute="width" constant="20.5" id="x7s-jy-iuW"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="heart" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="faveImageButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="cop-3Z-iv3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zion-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="uV3-Nc-KAI">
+                                <rect key="frame" x="8" y="32" width="144" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Atw-Je-jgY"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mercurial vapour 42" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="5zx-4B-GNq">
-                                <rect key="frame" x="8" y="159" width="106" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ 120" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUw-7O-NO0">
-                                <rect key="frame" x="8" y="175" width="27" height="12"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF6-Jk-2wF">
-                                <rect key="frame" x="122" y="160" width="23" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="plus" catalog="system"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addItemPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BHK-X8-i4f"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Uul-Zr-Q7P">
+                                <rect key="frame" x="8" y="153.5" width="113.5" height="27.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Mercurial vapour 42" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="5zx-4B-GNq">
+                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="vtP-Bp-xu9">
+                                        <rect key="frame" x="0.0" y="16.5" width="26" height="11"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27.5" id="USZ-p4-URA"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LIo-oY-81g">
+                                <rect key="frame" x="125" y="160" width="20" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF6-Jk-2wF">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="dGo-dw-H3a"/>
+                                            <constraint firstAttribute="width" constant="20" id="x1Z-lo-sfE"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="plus" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addItemPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BHK-X8-i4f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Iz-0P-caQ" firstAttribute="leading" secondItem="Mwb-fi-cAX" secondAttribute="leading" constant="8" id="9Mn-Iz-7Aq"/>
+                            <constraint firstAttribute="width" constant="160" id="ADb-h8-hMB"/>
+                            <constraint firstItem="LIo-oY-81g" firstAttribute="top" secondItem="uV3-Nc-KAI" secondAttribute="bottom" constant="8" symbolic="YES" id="QVp-Xs-wwZ"/>
+                            <constraint firstAttribute="trailing" secondItem="uV3-Nc-KAI" secondAttribute="trailing" constant="8" id="Qkc-XN-1fn"/>
+                            <constraint firstAttribute="height" constant="194" id="RAh-hJ-49e"/>
+                            <constraint firstItem="9Iz-0P-caQ" firstAttribute="top" secondItem="Mwb-fi-cAX" secondAttribute="top" constant="15" id="ZwP-UX-N91"/>
+                            <constraint firstAttribute="bottom" secondItem="Uul-Zr-Q7P" secondAttribute="bottom" constant="13" id="bE0-WS-uUl"/>
+                            <constraint firstAttribute="trailing" secondItem="9Iz-0P-caQ" secondAttribute="trailing" constant="19.5" id="dQ2-27-MB5"/>
+                            <constraint firstItem="uV3-Nc-KAI" firstAttribute="leading" secondItem="Mwb-fi-cAX" secondAttribute="leading" constant="8" id="n3G-Qe-DBA"/>
+                            <constraint firstAttribute="bottom" secondItem="LIo-oY-81g" secondAttribute="bottom" constant="12" id="rqT-ha-ac8"/>
+                            <constraint firstAttribute="trailing" secondItem="LIo-oY-81g" secondAttribute="trailing" constant="15" id="sEG-IM-e1i"/>
+                            <constraint firstItem="Uul-Zr-Q7P" firstAttribute="leading" secondItem="Mwb-fi-cAX" secondAttribute="leading" constant="8" id="z3S-6W-W3o"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -94,7 +140,7 @@
                 <outlet property="backgroundCellView" destination="Mwb-fi-cAX" id="lrC-UN-M1R"/>
                 <outlet property="designerLogo" destination="R0f-jE-Wpb" id="Vht-70-ps8"/>
                 <outlet property="faveImageButton" destination="bRU-mB-0eQ" id="41b-1n-fAx"/>
-                <outlet property="price" destination="uUw-7O-NO0" id="QTa-Mk-UaQ"/>
+                <outlet property="price" destination="vtP-Bp-xu9" id="tZb-zy-P7e"/>
                 <outlet property="sneakerImage" destination="uV3-Nc-KAI" id="gBV-3H-IBz"/>
                 <outlet property="sneakerNameModel" destination="5zx-4B-GNq" id="vBN-qi-2mA"/>
             </connections>
@@ -104,12 +150,9 @@
     <resources>
         <image name="Image-2" width="333" height="187.5"/>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="mens" width="840" height="859"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
+        <image name="zion-removebg-preview" width="500" height="500"/>
+        <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>

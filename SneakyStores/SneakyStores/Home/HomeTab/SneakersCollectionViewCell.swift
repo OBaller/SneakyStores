@@ -21,11 +21,12 @@ class SneakersCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let font:UIFont? = UIFont(name: "Helvetica", size:16)
-        let fontSuper:UIFont? = UIFont(name: "Helvetica", size:8)
-        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "$ 200", attributes: [.font:font!])
-        attString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:0,length:1))
-        price.attributedText = attString
+//        let font:UIFont? = UIFont(name: "Helvetica", size:16)
+//        let fontSuper:UIFont? = UIFont(name: "Helvetica", size:8)
+//        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "$ 200", attributes: [.font:font!])
+//        attString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:0,length:1))
+//        price.attributedText = attString
+        
     }
     
     static func nib() -> UINib {

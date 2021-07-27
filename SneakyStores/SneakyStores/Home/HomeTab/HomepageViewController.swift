@@ -85,7 +85,7 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
         if indexPath.item == 0 {
             return .init(width: sneakersCollectionView.frame.size.width, height: 60)
         } else {
-            return .init(width: 0, height: 0)
+            return .init(width: 160, height: 250)
         }
     }
     
@@ -101,9 +101,9 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
     
 }
 
-extension HomepageViewController: SeeAllViewControllerDelegate {
-    func instantiateSeeAllViewController() {
-        guard let seeAllController = storyboard?.instantiateViewController(identifier: "SeeAllViewController") as? SeemoreViewController else { return }
+extension HomepageViewController: SeemoreViewControllerDelegate {
+    func instantiateSeemoreViewController() {
+        guard let seeAllController = storyboard?.instantiateViewController(identifier: "SeemoreViewController") as? SeemoreViewController else { return }
         navigationController?.pushViewController(seeAllController, animated: true)
     }
     

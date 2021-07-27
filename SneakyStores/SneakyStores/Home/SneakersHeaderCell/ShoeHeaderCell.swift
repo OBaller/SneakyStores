@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol SeeAllViewControllerDelegate {
-    func instantiateSeeAllViewController()
+protocol SeemoreViewControllerDelegate {
+    func instantiateSeemoreViewController()
 }
 
 class ShoeHeaderCell: UICollectionReusableView {
-    var instantiateSeeAllViewcontroller: (()->())? // closure
-    var delegate: SeeAllViewControllerDelegate?
+    var instantiateSeemoreViewcontroller: (()->())? // closure
+    var delegate: SeemoreViewControllerDelegate?
     
     let hotpickLabel: UILabel = {
         let label = UILabel()
@@ -34,7 +34,7 @@ class ShoeHeaderCell: UICollectionReusableView {
         let btn = UIButton()
         btn.setTitle("See all", for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        btn.addTarget(self, action: #selector(toSeeAllViewController),  for: .touchUpInside)
+        btn.addTarget(self, action: #selector(toSeemoreViewController),  for: .touchUpInside)
         btn.constrainHeight(constant: 30)
         btn.constrainWidth(constant: 80)
         btn.titleLabel?.tintColor = UIColor.systemBlue
@@ -42,8 +42,8 @@ class ShoeHeaderCell: UICollectionReusableView {
         return btn
     }()
     
-    @objc func toSeeAllViewController () {
-        delegate?.instantiateSeeAllViewController()
+    @objc func toSeemoreViewController () {
+        delegate?.instantiateSeemoreViewController()
     }
     
     

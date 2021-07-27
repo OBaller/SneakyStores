@@ -8,7 +8,7 @@
 import UIKit
 
 class ForyouCollectionViewCell: UICollectionViewCell {
-   var delegate: SeeAllViewControllerDelegate?
+   var delegate: SeemoreViewControllerDelegate?
     
     @IBOutlet weak var seeAllButton: UIButton!
     static let identifier = "ForyouCollectionViewCell"
@@ -23,6 +23,6 @@ class ForyouCollectionViewCell: UICollectionViewCell {
 
     @IBAction func seeAllButtonPressed(_ sender: UIButton) {
         print("Okay, you tapped me!!")
-        delegate?.instantiateSeeAllViewController()
+        delegate?.instantiateSeemoreViewController()
     }
 }
