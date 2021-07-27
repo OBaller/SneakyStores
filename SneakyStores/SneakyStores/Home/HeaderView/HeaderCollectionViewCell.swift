@@ -9,11 +9,8 @@ import UIKit
 
 class HeaderCollectionViewCell: UICollectionViewCell {
     static let identifier = "HeaderCollectionViewCell"
+    @IBOutlet weak var backgroundCellView: UIView!
     
-    @IBOutlet weak var designerLogo: UIImageView!
-    @IBOutlet weak var sneakerImage: UIImageView!
-    @IBOutlet weak var sneakerName: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +19,7 @@ class HeaderCollectionViewCell: UICollectionViewCell {
         let fontSuper:UIFont? = UIFont(name: "Helvetica", size:10)
         let attString:NSMutableAttributedString = NSMutableAttributedString(string: "$ 200", attributes: [.font:font!])
         attString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:0,length:1))
-        priceLabel.attributedText = attString
+        //sneakerPrice.attributedText = attString
         
     }
     

@@ -27,7 +27,7 @@ class HeaderCollectionViewController: HorinzontalSnappingController, UICollectio
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCollectionViewCell.identifier, for: indexPath) as? HeaderCollectionViewCell
         cell?.layer.cornerRadius = 12
-        cell?.backgroundColor = .systemBlue
+        cell?.backgroundColor = #colorLiteral(red: 0.8051595092, green: 0.7116223574, blue: 0.9723115563, alpha: 1)
         return cell ?? UICollectionViewCell()
     }
 
