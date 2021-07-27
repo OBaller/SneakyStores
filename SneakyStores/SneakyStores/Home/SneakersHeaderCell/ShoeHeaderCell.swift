@@ -24,7 +24,7 @@ class ShoeHeaderCell: UICollectionReusableView {
     
     let imageView: UIImageView = {
         let image = UIImageView()
-        image.image = #imageLiteral(resourceName: "af")
+        image.image = #imageLiteral(resourceName: "Image-6")
         image.constrainWidth(constant: 20)
         image.constrainHeight(constant: 20)
         return image

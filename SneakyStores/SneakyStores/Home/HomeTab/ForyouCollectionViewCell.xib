@@ -27,11 +27,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHu-ZC-8WX">
-                        <rect key="frame" x="282" y="5" width="46" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="46" id="g7P-b0-J35"/>
-                            <constraint firstAttribute="height" constant="30" id="urd-9P-bRH"/>
-                        </constraints>
+                        <rect key="frame" x="255" y="5" width="46" height="30"/>
                         <state key="normal" title="See all"/>
                         <connections>
                             <action selector="seeAllButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="YfM-Wb-3zf"/>
@@ -41,12 +37,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="VHu-ZC-8WX" secondAttribute="trailing" constant="10" id="DSa-Bc-22h"/>
+                <constraint firstAttribute="bottom" secondItem="VHu-ZC-8WX" secondAttribute="bottom" constant="5" id="Bec-kx-Hty"/>
                 <constraint firstItem="RAf-Ol-rhI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="RDK-o4-KeS"/>
+                <constraint firstItem="VHu-ZC-8WX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="RO3-zj-3lk"/>
                 <constraint firstAttribute="bottom" secondItem="RAf-Ol-rhI" secondAttribute="bottom" constant="9" id="W5A-ov-cP3"/>
-                <constraint firstItem="VHu-ZC-8WX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="g3U-bx-SF0"/>
+                <constraint firstAttribute="trailing" secondItem="VHu-ZC-8WX" secondAttribute="trailing" constant="37" id="h6Y-TM-ueP"/>
                 <constraint firstItem="RAf-Ol-rhI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="txh-3s-jxy"/>
-                <constraint firstAttribute="bottom" secondItem="VHu-ZC-8WX" secondAttribute="bottom" constant="5" id="x4v-ub-uPJ"/>
             </constraints>
             <size key="customSize" width="338" height="40"/>
             <connections>

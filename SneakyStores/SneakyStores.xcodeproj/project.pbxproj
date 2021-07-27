@@ -19,7 +19,7 @@
 		1812EED926AF038C00695B0D /* HorinzontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EED826AF038C00695B0D /* HorinzontalSnappingController.swift */; };
 		1812EEDB26AF042900695B0D /* ShoeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEDA26AF042900695B0D /* ShoeHeaderCell.swift */; };
 		1812EEDD26AF051D00695B0D /* UIView + Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEDC26AF051D00695B0D /* UIView + Layout.swift */; };
-		1812EEDF26AF058900695B0D /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEDE26AF058900695B0D /* HorizontalStackView.swift */; };
+		1812EEE126B007E200695B0D /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEE026B007E200695B0D /* HorizontalStackView.swift */; };
 		189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7426AB80A9005B946B /* AppDelegate.swift */; };
 		189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7626AB80A9005B946B /* SceneDelegate.swift */; };
 		189EAA7926AB80A9005B946B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7826AB80A9005B946B /* ViewController.swift */; };
@@ -61,7 +61,7 @@
 		1812EED826AF038C00695B0D /* HorinzontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorinzontalSnappingController.swift; sourceTree = "<group>"; };
 		1812EEDA26AF042900695B0D /* ShoeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeHeaderCell.swift; sourceTree = "<group>"; };
 		1812EEDC26AF051D00695B0D /* UIView + Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Layout.swift"; sourceTree = "<group>"; };
-		1812EEDE26AF058900695B0D /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
+		1812EEE026B007E200695B0D /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		189EAA7126AB80A9005B946B /* SneakyStores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakyStores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189EAA7426AB80A9005B946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189EAA7626AB80A9005B946B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 				189EAAA926ACCC86005B946B /* HUD.swift */,
 				1812EED826AF038C00695B0D /* HorinzontalSnappingController.swift */,
 				1812EEDC26AF051D00695B0D /* UIView + Layout.swift */,
-				1812EEDE26AF058900695B0D /* HorizontalStackView.swift */,
+				1812EEE026B007E200695B0D /* HorizontalStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -403,7 +403,7 @@
 				189EAA7926AB80A9005B946B /* ViewController.swift in Sources */,
 				1812EECC26AEDEFD00695B0D /* SneakersCollectionViewCell.swift in Sources */,
 				189EAAAF26ACCDD7005B946B /* LoginViewModel.swift in Sources */,
-				1812EEDF26AF058900695B0D /* HorizontalStackView.swift in Sources */,
+				1812EEE126B007E200695B0D /* HorizontalStackView.swift in Sources */,
 				1812EE7D26ADCD0400695B0D /* SeemoreViewController.swift in Sources */,
 				1812EED726AF032300695B0D /* HeaderCollectionViewController.swift in Sources */,
 				189EAABA26AD734F005B946B /* ProfileViewController.swift in Sources */,

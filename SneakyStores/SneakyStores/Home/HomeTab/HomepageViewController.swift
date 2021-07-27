@@ -57,7 +57,6 @@ extension HomepageViewController: UITextFieldDelegate {
 extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ShoeHeaderCell", for: indexPath) as? ShoeHeaderCell
-        header?.backgroundColor = .gray
         header?.delegate = self
         return header ?? UICollectionReusableView()
     }
