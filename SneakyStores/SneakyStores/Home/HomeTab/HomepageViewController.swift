@@ -76,10 +76,12 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
             cell?.delegate = self
             return cell ?? UICollectionViewCell()
         } else {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SneakersCollectionViewCell.identifier, for: indexPath) as? SneakersCollectionViewCell
-            return cell ?? UICollectionViewCell()
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SneakersCollectionViewCell.identifier, for: indexPath) as? SneakersCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.setUp(vviewModel.ftwears[indexPath.row])
+            return cell
         }
-       
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
