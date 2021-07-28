@@ -137,6 +137,7 @@
             </constraints>
             <size key="customSize" width="171" height="198"/>
             <connections>
+                <outlet property="addBttn" destination="qF6-Jk-2wF" id="GQR-dw-Tzo"/>
                 <outlet property="backgroundCellView" destination="Mwb-fi-cAX" id="lrC-UN-M1R"/>
                 <outlet property="designerLogo" destination="R0f-jE-Wpb" id="Vht-70-ps8"/>
                 <outlet property="faveImageButton" destination="bRU-mB-0eQ" id="41b-1n-fAx"/>

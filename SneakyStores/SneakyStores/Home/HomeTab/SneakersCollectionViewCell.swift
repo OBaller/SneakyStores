@@ -6,8 +6,15 @@
 //
 
 import UIKit
+protocol SneakersCollectionViewCellDelegate: AnyObject {
+    func didTapAddBtn(with item: SneakersModel)
+    func didTapRemoveBtn(with item: SneakersModel)
+}
+
 
 class SneakersCollectionViewCell: UICollectionViewCell {
+    weak var delegate: SneakersCollectionViewCellDelegate?
+    private var itemsDetailModel: SneakersModel?
     
     static let identifier = "SneakersCollectionViewCell"
     
@@ -17,15 +24,11 @@ class SneakersCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var sneakerNameModel: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var faveImageButton: UIButton!
+    @IBOutlet weak var addBttn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        let font:UIFont? = UIFont(name: "Helvetica", size:16)
-//        let fontSuper:UIFont? = UIFont(name: "Helvetica", size:8)
-//        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "$ 200", attributes: [.font:font!])
-//        attString.setAttributes([.font:fontSuper!,.baselineOffset:10], range: NSRange(location:0,length:1))
-//        price.attributedText = attString
         
     }
     
@@ -37,5 +40,13 @@ class SneakersCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func addItemPressed(_ sender: UIButton) {
+    }
+    
+    func setUp(_ footwears: SneakersModel) {
+        backgroundCellView.backgroundColor = footwears.backgroundCellView
+        designerLogo.image = footwears.designerLogo
+        sneakerImage.image = footwears.sneakerImage
+        price.text = footwears.itemPrice
+        sneakerNameModel.text = footwears.itemName
     }
 }

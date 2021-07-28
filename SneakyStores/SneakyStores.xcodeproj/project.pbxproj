@@ -22,6 +22,7 @@
 		1812EEE126B007E200695B0D /* HorizontalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEE026B007E200695B0D /* HorizontalStackView.swift */; };
 		1812EEE326B1438B00695B0D /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEE226B1438A00695B0D /* HeaderModel.swift */; };
 		1812EEE526B1470800695B0D /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEE426B1470800695B0D /* HeaderViewModel.swift */; };
+		1812EEE726B1795300695B0D /* SneakersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812EEE626B1795300695B0D /* SneakersModel.swift */; };
 		189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7426AB80A9005B946B /* AppDelegate.swift */; };
 		189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7626AB80A9005B946B /* SceneDelegate.swift */; };
 		189EAA7926AB80A9005B946B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAA7826AB80A9005B946B /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 		1812EEE026B007E200695B0D /* HorizontalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalStackView.swift; sourceTree = "<group>"; };
 		1812EEE226B1438A00695B0D /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
 		1812EEE426B1470800695B0D /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
+		1812EEE626B1795300695B0D /* SneakersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersModel.swift; sourceTree = "<group>"; };
 		189EAA7126AB80A9005B946B /* SneakyStores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakyStores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189EAA7426AB80A9005B946B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		189EAA7626AB80A9005B946B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				1812EEC726AEDD3500695B0D /* ForyouCollectionViewCell.xib */,
 				1812EECA26AEDEFD00695B0D /* SneakersCollectionViewCell.swift */,
 				1812EECB26AEDEFD00695B0D /* SneakersCollectionViewCell.xib */,
+				1812EEE626B1795300695B0D /* SneakersModel.swift */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				1812EECC26AEDEFD00695B0D /* SneakersCollectionViewCell.swift in Sources */,
 				189EAAAF26ACCDD7005B946B /* LoginViewModel.swift in Sources */,
 				1812EEE526B1470800695B0D /* HeaderViewModel.swift in Sources */,
+				1812EEE726B1795300695B0D /* SneakersModel.swift in Sources */,
 				1812EEE126B007E200695B0D /* HorizontalStackView.swift in Sources */,
 				1812EE7D26ADCD0400695B0D /* SeemoreViewController.swift in Sources */,
 				1812EED726AF032300695B0D /* HeaderCollectionViewController.swift in Sources */,
