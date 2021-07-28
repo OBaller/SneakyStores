@@ -10,6 +10,10 @@ import UIKit
 class HeaderCollectionViewCell: UICollectionViewCell {
     static let identifier = "HeaderCollectionViewCell"
     @IBOutlet weak var backgroundCellView: UIView!
+    @IBOutlet weak var designerLogo: UIImageView!
+    @IBOutlet weak var sneakerImage: UIImageView!
+    @IBOutlet weak var sneakerNameModel: UILabel!
+    @IBOutlet weak var sneakerPrice: UILabel!
     
     
     override func awakeFromNib() {
@@ -26,5 +30,13 @@ class HeaderCollectionViewCell: UICollectionViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "HeaderCollectionViewCell", bundle: nil)
     }
-
+    
+    func setUp(_ sneakers: HeaderModel) {
+        backgroundCellView.backgroundColor = sneakers.backgroundCellView
+        designerLogo.image = sneakers.designerLogo
+        sneakerImage.image = sneakers.sneakerImage
+        sneakerNameModel.text = sneakers.itemName
+        sneakerPrice.text = sneakers.itemPrice
+    }
+    
 }

@@ -15,7 +15,7 @@ class HomepageViewController: UIViewController {
     @IBOutlet weak var sneakersCollectionView: UICollectionView!
     
     fileprivate let firstCell = "ForyouCollectionViewCell"
-    
+    let viewModel = HeaderViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTextField.delegate = self
@@ -66,7 +66,7 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 11
+        return viewModel.footies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "addi.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "fubu-removebg-preview.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

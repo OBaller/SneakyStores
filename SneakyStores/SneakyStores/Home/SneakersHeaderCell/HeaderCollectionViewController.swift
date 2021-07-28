@@ -8,7 +8,7 @@
 import UIKit
 
 class HeaderCollectionViewController: HorinzontalSnappingController, UICollectionViewDelegateFlowLayout {
-
+    let viewModel = HeaderViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,14 +21,16 @@ class HeaderCollectionViewController: HorinzontalSnappingController, UICollectio
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.footies.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCollectionViewCell.identifier, for: indexPath) as? HeaderCollectionViewCell
-        cell?.layer.cornerRadius = 12
-        cell?.backgroundColor = #colorLiteral(red: 0.8051595092, green: 0.7116223574, blue: 0.9723115563, alpha: 1)
-        return cell ?? UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCollectionViewCell.identifier, for: indexPath) as? HeaderCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.layer.cornerRadius = 12
+        cell.setUp(viewModel.footies[indexPath.row])
+        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

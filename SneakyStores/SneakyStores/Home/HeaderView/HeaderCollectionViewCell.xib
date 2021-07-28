@@ -81,6 +81,11 @@
                             <constraint firstItem="Cyp-tE-kFo" firstAttribute="top" secondItem="s2p-50-Ymh" secondAttribute="top" constant="12" id="psx-Jz-8Yt"/>
                             <constraint firstItem="muw-dp-7J4" firstAttribute="leading" secondItem="s2p-50-Ymh" secondAttribute="leading" constant="15" id="x8T-x2-tMi"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
@@ -94,6 +99,10 @@
             <size key="customSize" width="218" height="294"/>
             <connections>
                 <outlet property="backgroundCellView" destination="s2p-50-Ymh" id="pUm-lW-6TY"/>
+                <outlet property="designerLogo" destination="AfA-3E-MAx" id="zr4-FQ-wfU"/>
+                <outlet property="sneakerImage" destination="8b0-aI-yla" id="nDQ-W1-Rkr"/>
+                <outlet property="sneakerNameModel" destination="9mr-ir-9fz" id="hZS-tP-w8R"/>
+                <outlet property="sneakerPrice" destination="xuF-lr-osi" id="9Ij-as-Rim"/>
             </connections>
             <point key="canvasLocation" x="63.04347826086957" y="42.522321428571423"/>
         </collectionViewCell>
