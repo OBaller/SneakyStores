@@ -16,6 +16,7 @@ class HomepageViewController: UIViewController {
     
     fileprivate let firstCell = "ForyouCollectionViewCell"
     let viewModel = HeaderViewModel()
+    let vviewModel = SneakersViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTextField.delegate = self
@@ -66,7 +67,7 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.footies.count
+        return vviewModel.ftwears.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -75,7 +76,7 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
             cell?.delegate = self
             return cell ?? UICollectionViewCell()
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SneakersCollectionViewCell.identifier, for: indexPath) as? SneakersCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SneakersCollectionViewCell.identifier, for: indexPath) as? SneakersCollectionViewCell
             return cell ?? UICollectionViewCell()
         }
        
