@@ -32,6 +32,10 @@ class HeaderCollectionViewController: HorinzontalSnappingController, UICollectio
         cell.setUp(viewModel.footies[indexPath.row])
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(viewModel.footies[indexPath.row].itemName)
+    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return .init(width: view.frame.width - 150, height: view.frame.height)

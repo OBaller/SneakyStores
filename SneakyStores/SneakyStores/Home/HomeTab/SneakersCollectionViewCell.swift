@@ -37,9 +37,25 @@ class SneakersCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func faveImageButtonPressed(_ sender: UIButton) {
+        if var items = itemsDetailModel {
+            if items.liked == false {
+                items.liked = true
+                delegate?.didTapAddBtn(with: items)
+            } else {
+                items.liked = false
+                delegate?.didTapRemoveBtn(with: items)
+            }
+        } else {
+            print("Naseem")
+        }
     }
     
     @IBAction func addItemPressed(_ sender: UIButton) {
+    }
+    
+    private func configureLikedBtn(for selectedState: Bool) {
+        faveImageButton.setImage(UIImage(systemName: selectedState ? "heart.fill" : "heart"), for: .normal)
+        faveImageButton.tintColor = selectedState ? .red : .none
     }
     
     func setUp(_ footwears: SneakersModel) {
@@ -48,5 +64,7 @@ class SneakersCollectionViewCell: UICollectionViewCell {
         sneakerImage.image = footwears.sneakerImage
         price.text = footwears.itemPrice
         sneakerNameModel.text = footwears.itemName
+        configureLikedBtn(for: footwears.liked == false )
+        //self.itemsDetailModel = footwears
     }
 }

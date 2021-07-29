@@ -13,4 +13,5 @@ struct SneakersModel {
     let backgroundCellView: UIColor
     let itemPrice: String
     let itemName: String
+    var liked: Bool
 }

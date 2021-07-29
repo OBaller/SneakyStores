@@ -106,8 +106,10 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
 
 extension HomepageViewController: SeemoreViewControllerDelegate {
     func instantiateSeemoreViewController() {
-        guard let seeAllController = storyboard?.instantiateViewController(identifier: "SeemoreViewController") as? SeemoreViewController else { return }
-        navigationController?.pushViewController(seeAllController, animated: true)
+        let newStoryboard = UIStoryboard(name: "SeemoreSneakers", bundle: nil)
+        let newController = newStoryboard
+            .instantiateViewController(identifier: "SeemoreViewController") as SeemoreViewController
+        navigationController?.pushViewController(newController, animated: true)
     }
     
     
