@@ -37,7 +37,7 @@ class SneakersCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func faveImageButtonPressed(_ sender: UIButton) {
-        if var items = itemsDetailModel {
+        if let items = itemsDetailModel {
             if items.liked == false {
                 items.liked = true
                 delegate?.didTapAddBtn(with: items)
@@ -64,7 +64,7 @@ class SneakersCollectionViewCell: UICollectionViewCell {
         sneakerImage.image = footwears.sneakerImage
         price.text = footwears.itemPrice
         sneakerNameModel.text = footwears.itemName
-        configureLikedBtn(for: footwears.liked == false )
-        //self.itemsDetailModel = footwears
+        configureLikedBtn(for: footwears.liked == true )
+        self.itemsDetailModel = footwears
     }
 }
