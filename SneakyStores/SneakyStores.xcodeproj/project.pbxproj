@@ -174,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				1812EEC626AEDD3500695B0D /* ForyouCollectionViewCell.swift */,
-				18B9132E26B3ED620053046C /* FaveCollectionViewCell.swift */,
 				1812EEC726AEDD3500695B0D /* ForyouCollectionViewCell.xib */,
 				1812EECA26AEDEFD00695B0D /* SneakersCollectionViewCell.swift */,
 				1812EECB26AEDEFD00695B0D /* SneakersCollectionViewCell.xib */,
@@ -338,6 +337,7 @@
 				189EAAB126AD6F04005B946B /* Homepage.storyboard */,
 				189EAAB326AD72F4005B946B /* HomepageViewController.swift */,
 				189EAAB526AD730A005B946B /* FaveSneakersViewController.swift */,
+				18B9132E26B3ED620053046C /* FaveCollectionViewCell.swift */,
 				189EAAB726AD7331005B946B /* CartViewController.swift */,
 				189EAAB926AD734F005B946B /* ProfileViewController.swift */,
 				1812EED326AF01F500695B0D /* SneakersHeaderCell */,
