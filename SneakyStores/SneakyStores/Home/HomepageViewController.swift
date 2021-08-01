@@ -4,7 +4,7 @@
 //
 //  Created by apple on 25/07/2021.
 //
-
+import RealmSwift
 import UIKit
 
 class HomepageViewController: UIViewController {
@@ -98,6 +98,7 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SneakersCollectionViewCell.identifier, for: indexPath) as? SneakersCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            cell.delegate = self
             cell.setUp(with: vviewModel.sneaker[indexPath.row])
             return cell
         }
@@ -131,19 +132,29 @@ extension HomepageViewController: SeemoreViewControllerDelegate {
         navigationController?.pushViewController(newController, animated: true)
     }
 }
-//
-//extension HomepageViewController: SneakersCollectionViewCellDelegate {
-//    func didTapAddBtn(with item: SneakersModel) {
-//        let choiceItem = LikeModel()
-//        choiceItem.itemName = item.itemName
-//        choiceItem.backgroundCellView = item.backgroundCellView
-//        choiceItem.designerLogo = item.designerLogo
-//        
-//    }
-//    
-//    func didTapRemoveBtn(with item: SneakersModel) {
-//        <#code#>
-//    }
-//    
-//    
-//}
+
+extension HomepageViewController: SneakersCollectionViewCellDelegate {
+    func didTapAddBtn(with item: SneakersModel) {
+        let choiceItem = LikeModel()
+        choiceItem.itemName = item.itemName
+        choiceItem.designerLogo = item.designerLogo
+        choiceItem.itemPrice = item.itemPrice
+        choiceItem.sneakerImage = item.sneakerImage
+        choiceItem.liked = item.liked
+        RealmService.shared.create(choiceItem)
+        self.sneakersCollectionView.reloadData()
+    }
+    
+    func didTapRemoveBtn(with item: SneakersModel) {
+        let realm = try! Realm()
+        let data = realm.objects(LikeModel.self).map({ $0 })
+        for i in data{
+            if i.sneakerImage == item.sneakerImage {
+                RealmService.shared.delete(i)
+            }
+        }
+        self.sneakersCollectionView.reloadData()
+    }
+    
+    
+}

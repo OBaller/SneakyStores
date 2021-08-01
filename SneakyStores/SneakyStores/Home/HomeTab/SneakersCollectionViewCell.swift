@@ -15,6 +15,7 @@ protocol SneakersCollectionViewCellDelegate: AnyObject {
 
 
 class SneakersCollectionViewCell: UICollectionViewCell {
+    
     weak var delegate: SneakersCollectionViewCellDelegate?
     private var itemsDetailModel: SneakersModel?
     
@@ -37,7 +38,7 @@ class SneakersCollectionViewCell: UICollectionViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "SneakersCollectionViewCell", bundle: nil)
     }
-
+    
     @IBAction func faveImageButtonPressed(_ sender: UIButton) {
         if let items = itemsDetailModel {
             if items.liked == false {
@@ -53,6 +54,7 @@ class SneakersCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func addItemPressed(_ sender: UIButton) {
+        
     }
     
     private func configureLikedBtn(for selectedState: Bool) {
