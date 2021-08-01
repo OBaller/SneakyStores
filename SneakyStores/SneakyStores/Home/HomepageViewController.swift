@@ -17,15 +17,20 @@ class HomepageViewController: UIViewController {
     fileprivate let firstCell = "ForyouCollectionViewCell"
     let viewModel = HeaderViewModel()
     let vviewModel = SneakersViewModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        vviewModel.getUserName()
+        userName.text = vviewModel.greetingText
+        vviewModel.getAllSneakers()
         searchTextField.delegate = self
         sneakersCollectionView.delegate = self
         sneakersCollectionView.dataSource = self
         sneakersCollectionView.register(SneakersCollectionViewCell.nib(), forCellWithReuseIdentifier: SneakersCollectionViewCell.identifier)
         sneakersCollectionView.register(ShoeHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ShoeHeaderCell")
         sneakersCollectionView.register(ForyouCollectionViewCell.nib(), forCellWithReuseIdentifier: ForyouCollectionViewCell.identifier)
-        
+        setupViewModelListeners()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +44,21 @@ class HomepageViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
-
+    fileprivate func setupViewModelListeners() {
+        vviewModel.notifySneakerCompletionHandler = { [weak self] in
+            DispatchQueue.main.async {
+                self?.sneakersCollectionView.reloadData()
+            }
+            
+        }
+       
+        vviewModel.usernameHandler = { [weak self] in
+            self?.userName.text = self?.vviewModel.greetingText
+            self?.userName.font = UIFont(name: "Helvetica", size: 16.0)
+            self?.userName.font = UIFont.boldSystemFont(ofSize: 16.0)
+        }
+    }
+    
     @IBAction func notificationButtonTapped(_ sender: UIButton) {
         
     }
@@ -67,7 +86,7 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vviewModel.ftwears.count
+        return vviewModel.sneaker.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -79,7 +98,7 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SneakersCollectionViewCell.identifier, for: indexPath) as? SneakersCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.setUp(vviewModel.ftwears[indexPath.row])
+            cell.setUp(with: vviewModel.sneaker[indexPath.row])
             return cell
         }
     }
@@ -99,7 +118,7 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 0, left: 20, bottom: 10, right: 20)
     }
-
+    
     
     
 }
@@ -111,6 +130,20 @@ extension HomepageViewController: SeemoreViewControllerDelegate {
             .instantiateViewController(identifier: "SeemoreViewController") as SeemoreViewController
         navigationController?.pushViewController(newController, animated: true)
     }
-    
-    
 }
+//
+//extension HomepageViewController: SneakersCollectionViewCellDelegate {
+//    func didTapAddBtn(with item: SneakersModel) {
+//        let choiceItem = LikeModel()
+//        choiceItem.itemName = item.itemName
+//        choiceItem.backgroundCellView = item.backgroundCellView
+//        choiceItem.designerLogo = item.designerLogo
+//        
+//    }
+//    
+//    func didTapRemoveBtn(with item: SneakersModel) {
+//        <#code#>
+//    }
+//    
+//    
+//}

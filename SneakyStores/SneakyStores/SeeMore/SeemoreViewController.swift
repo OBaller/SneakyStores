@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SeemoreViewController: UIViewController {
+class SeemoreViewController: UIViewController  {
     @IBOutlet weak var textFieldBackgroundView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
@@ -54,10 +54,12 @@ class SeemoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.getAllSneakers()
         title = "For You"
         seeAllCollectionView.delegate = self
         seeAllCollectionView.dataSource = self
         seeAllCollectionView.register(SneakersCollectionViewCell.nib(), forCellWithReuseIdentifier: SneakersCollectionViewCell.identifier)
+        setupViewModelListeners()
     }
  
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +67,14 @@ class SeemoreViewController: UIViewController {
         tabBarController?.tabBar.isHidden = true
     }
 
+    fileprivate func setupViewModelListeners() {
+        viewModel.notifySneakerCompletionHandler = { [weak self] in
+            DispatchQueue.main.async {
+                self?.seeAllCollectionView.reloadData()
+            }
+            
+        }
+    }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
     }
@@ -72,14 +82,15 @@ class SeemoreViewController: UIViewController {
 
 extension SeemoreViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.ftwears.count
+        return viewModel.sneaker.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SneakersCollectionViewCell.identifier, for: indexPath) as? SneakersCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.setUp(viewModel.ftwears[indexPath.row])
+//     cell.delegate = self
+        cell.setUp(with: viewModel.sneaker[indexPath.row])
         return cell
     }
     

@@ -8,11 +8,10 @@
 import UIKit
 
 class FaveSneakersViewController: UIViewController {
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .darkGray
     }
     
 

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+
 protocol SneakersCollectionViewCellDelegate: AnyObject {
     func didTapAddBtn(with item: SneakersModel)
     func didTapRemoveBtn(with item: SneakersModel)
@@ -58,10 +60,9 @@ class SneakersCollectionViewCell: UICollectionViewCell {
         faveImageButton.tintColor = selectedState ? .red : .none
     }
     
-    func setUp(_ footwears: SneakersModel) {
-        backgroundCellView.backgroundColor = footwears.backgroundCellView
-        designerLogo.image = footwears.designerLogo
-        sneakerImage.image = footwears.sneakerImage
+    func setUp(with footwears: SneakersModel) {
+        designerLogo.kf.setImage(with: footwears.designerLogo.asUrl)
+        sneakerImage.kf.setImage(with: footwears.sneakerImage.asUrl)
         price.text = footwears.itemPrice
         sneakerNameModel.text = footwears.itemName
         configureLikedBtn(for: footwears.liked == true )

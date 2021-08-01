@@ -4,41 +4,51 @@
 //
 //  Created by apple on 28/07/2021.
 //
-
+import FirebaseAuth
+import FirebaseFirestore
 import UIKit
 
 class SneakersViewModel {
-    var ftwears: [SneakersModel] = []
+   var sneaker = [SneakersModel]()
+    var greetingText = ""
+    var usernameHandler: (() -> Void)?
+    var notifySneakerCompletionHandler: (() -> Void)?
     
-    init() {
-        ftwears = [
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "zanotti-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl11-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$132", itemName: "Stripper 6XJ", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Image-2"), sneakerImage: #imageLiteral(resourceName: "coll-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$175", itemName: "Lady lag", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "yeezy-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl4-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$260", itemName: "Yeezy101", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Adidas-logo-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl2-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$185", itemName: "Nike Air Force", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Image-2"), sneakerImage: #imageLiteral(resourceName: "tra-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$250", itemName: "Nike Air", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "zanotti-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl9-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$140", itemName: "Zanny GI", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Image-2"), sneakerImage: #imageLiteral(resourceName: "zion-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$290", itemName: "Nike Rollo", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "macqueen"), sneakerImage: #imageLiteral(resourceName: "sl16-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$340", itemName: "McQueen J Model", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "fila-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "wed1-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$190", itemName: "Fila Maxi", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "d_g-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl10-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$90", itemName: "Y2K", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "fubu-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "wed8-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$150", itemName: "Fubu Retro JI", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "zanotti-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl13-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$140", itemName: "JBL Zanotti", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Image-2"), sneakerImage: #imageLiteral(resourceName: "niback-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$50", itemName: "Sneaky Slides", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Image-2"), sneakerImage: #imageLiteral(resourceName: "wed2-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$270", itemName: "Nas Nike", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "d_g-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl7-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$400", itemName: "D&G Vixen", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "jordan-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "wed3-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$180", itemName: "Jordan Air", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "yeezy-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl5-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$320", itemName: "YZY Swimmer", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "fubu-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "wed9-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$120", itemName: "F.Retro", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Adidas-logo-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl1-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$290", itemName: "Triathlon", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "jordan-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "wed4-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$80", itemName: "JordanXI", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Adidas-logo-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "addit-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$140", itemName: "Ladylag", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Adidas-logo-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "wed5-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$260", itemName: "BeyAdidas", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Adidas-logo-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl3-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$180", itemName: "Genesis 6L", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "Image-2"), sneakerImage: #imageLiteral(resourceName: "af-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$200", itemName: "G.Exotic", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "macqueen"), sneakerImage: #imageLiteral(resourceName: "sl15-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$360", itemName: "McQueen", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "d_g-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl8-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$170", itemName: "Dolce Retro", liked: true),
-            SneakersModel(designerLogo: #imageLiteral(resourceName: "yeezy-removebg-preview"), sneakerImage: #imageLiteral(resourceName: "sl6-removebg-preview"), backgroundCellView: #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1), itemPrice: "$190", itemName: "Yeezy Genasis", liked: true)
-        ]
+    
+    
+    func getAllSneakers() {
+        let getOrder = StocksService()
+        getOrder.getStocks { (result) in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let result):
+                result?.documents.forEach({ (doc) in
+                    let data = doc.data()
+                    if let name = data["sneakerName"] as? String, let logo = data["designerLogo"] as? String, let image = data["sneakerImage"] as? String, let price = data["sneakerPrice"] as? String {
+                        let newstock = SneakersModel(designerLogo: logo, sneakerImage: image, itemPrice: price, itemName: name, liked: false, stockID: doc.documentID)
+                        self.sneaker.append(newstock)
+                    }
+                })
+                self.notifySneakerCompletionHandler?()
+            }
+        }
     }
+    
+    func getUserName() {
+        let docId = Auth.auth().currentUser?.uid
+        let docRef = Firestore.firestore().collection("/users").document("\(docId!)")
+        docRef.getDocument {(document, error) in
+            if let document = document, document.exists {
+                let docData = document.data()
+                let status = docData!["fullName"] as? String ?? ""
+                let username = status
+                self.greetingText = "\(username)"
+                self.usernameHandler?()
+            } else {
+                debugPrint(error as Any)
+            }
+        }
+    }
+    
 }

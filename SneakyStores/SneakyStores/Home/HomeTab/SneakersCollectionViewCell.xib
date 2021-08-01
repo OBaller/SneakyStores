@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="160" height="194"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="9Iz-0P-caQ">
-                                <rect key="frame" x="8" y="15" width="132.5" height="21"/>
+                                <rect key="frame" x="8" y="4" width="132.5" height="21"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="R0f-jE-Wpb">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="21"/>
@@ -82,7 +81,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LIo-oY-81g">
-                                <rect key="frame" x="125" y="160" width="20" height="22"/>
+                                <rect key="frame" x="133" y="160" width="20" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF6-Jk-2wF">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
@@ -103,21 +102,25 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="UDl-xy-vfr"/>
+                                    <constraint firstAttribute="width" constant="20" id="upc-Z3-5BP"/>
+                                </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9Iz-0P-caQ" firstAttribute="leading" secondItem="Mwb-fi-cAX" secondAttribute="leading" constant="8" id="9Mn-Iz-7Aq"/>
                             <constraint firstAttribute="width" constant="160" id="ADb-h8-hMB"/>
-                            <constraint firstItem="LIo-oY-81g" firstAttribute="top" secondItem="uV3-Nc-KAI" secondAttribute="bottom" constant="8" symbolic="YES" id="QVp-Xs-wwZ"/>
+                            <constraint firstAttribute="trailing" secondItem="LIo-oY-81g" secondAttribute="trailing" constant="7" id="HKA-dO-0kJ"/>
+                            <constraint firstItem="9Iz-0P-caQ" firstAttribute="top" secondItem="Mwb-fi-cAX" secondAttribute="top" constant="4" id="NjZ-VY-9Gz"/>
                             <constraint firstAttribute="trailing" secondItem="uV3-Nc-KAI" secondAttribute="trailing" constant="8" id="Qkc-XN-1fn"/>
                             <constraint firstAttribute="height" constant="194" id="RAh-hJ-49e"/>
-                            <constraint firstItem="9Iz-0P-caQ" firstAttribute="top" secondItem="Mwb-fi-cAX" secondAttribute="top" constant="15" id="ZwP-UX-N91"/>
                             <constraint firstAttribute="bottom" secondItem="Uul-Zr-Q7P" secondAttribute="bottom" constant="13" id="bE0-WS-uUl"/>
-                            <constraint firstAttribute="trailing" secondItem="9Iz-0P-caQ" secondAttribute="trailing" constant="19.5" id="dQ2-27-MB5"/>
+                            <constraint firstItem="9Iz-0P-caQ" firstAttribute="leading" secondItem="Mwb-fi-cAX" secondAttribute="leading" constant="8" id="esF-gT-V4l"/>
                             <constraint firstItem="uV3-Nc-KAI" firstAttribute="leading" secondItem="Mwb-fi-cAX" secondAttribute="leading" constant="8" id="n3G-Qe-DBA"/>
-                            <constraint firstAttribute="bottom" secondItem="LIo-oY-81g" secondAttribute="bottom" constant="12" id="rqT-ha-ac8"/>
-                            <constraint firstAttribute="trailing" secondItem="LIo-oY-81g" secondAttribute="trailing" constant="15" id="sEG-IM-e1i"/>
+                            <constraint firstAttribute="trailing" secondItem="9Iz-0P-caQ" secondAttribute="trailing" constant="19.5" id="pgb-JG-LdL"/>
+                            <constraint firstItem="LIo-oY-81g" firstAttribute="top" secondItem="uV3-Nc-KAI" secondAttribute="bottom" constant="8" id="y2c-YD-gJB"/>
+                            <constraint firstAttribute="bottom" secondItem="LIo-oY-81g" secondAttribute="bottom" constant="12" id="ySq-sn-z1F"/>
                             <constraint firstItem="Uul-Zr-Q7P" firstAttribute="leading" secondItem="Mwb-fi-cAX" secondAttribute="leading" constant="8" id="z3S-6W-W3o"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -153,8 +156,5 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="zion-removebg-preview" width="500" height="500"/>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
