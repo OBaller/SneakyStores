@@ -4,6 +4,7 @@
 //
 //  Created by apple on 28/07/2021.
 //
+import RealmSwift
 import FirebaseAuth
 import FirebaseFirestore
 import UIKit
@@ -14,6 +15,12 @@ class SneakersViewModel {
     var usernameHandler: (() -> Void)?
     var notifySneakerCompletionHandler: (() -> Void)?
     
+    var data = [SneakersModel]()
+    var datas = [SneakersModel]()
+    var final = [SneakersModel]()
+    var niceShoe = [String]()
+    var completion: (() -> Void)?
+    var completions: (() -> Void)?
     
     
     func getAllSneakers() {
@@ -51,4 +58,29 @@ class SneakersViewModel {
         }
     }
     
+    
+    let realm = try! Realm()
+    
+    func get() {
+        let datass = realm.objects(LikeModel.self).map({ $0 })
+        for j in self.sneaker {
+            for i in datass {
+                self.niceShoe.append(i.itemName)}
+            for a in datass {
+                self.niceShoe.append(a.itemPrice)}
+            for b in datass {
+                self.niceShoe.append(b.designerLogo)}
+            if self.niceShoe.contains(j.sneakerImage){
+                if j.sneakerImage.asUrl != nil {
+                    self.datas.append(SneakersModel(designerLogo: j.designerLogo, sneakerImage: j.sneakerImage, itemPrice: j.itemPrice, itemName: j.itemName, liked: false, stockID: "stockID"))
+                    
+                }
+            } else {
+                if j.sneakerImage.asUrl != nil {
+                    self.datas.append(SneakersModel(designerLogo: j.designerLogo, sneakerImage: j.sneakerImage, itemPrice: j.itemPrice, itemName: j.itemName, liked: false, stockID: "stockID"))
+                }
+            }
+            
+        }
+    }
 }

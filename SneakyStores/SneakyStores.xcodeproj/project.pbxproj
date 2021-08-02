@@ -67,7 +67,7 @@
 		189EAABA26AD734F005B946B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EAAB926AD734F005B946B /* ProfileViewController.swift */; };
 		18B9132B26B30D130053046C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9132A26B30D130053046C /* Realm */; };
 		18B9132D26B30D130053046C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9132C26B30D130053046C /* RealmSwift */; };
-		18B9132F26B3ED620053046C /* FaveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9132E26B3ED620053046C /* FaveCollectionViewCell.swift */; };
+		18D78B0426B7F6A70046BE63 /* FaveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D78B0326B7F6A70046BE63 /* FaveCollectionViewCell.swift */; };
 		480DDDD4550AFF51B777AFA4 /* Pods_SneakyStores.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF21425E3C83B99A20F741C /* Pods_SneakyStores.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,7 +130,7 @@
 		189EAAB526AD730A005B946B /* FaveSneakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveSneakersViewController.swift; sourceTree = "<group>"; };
 		189EAAB726AD7331005B946B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		189EAAB926AD734F005B946B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		18B9132E26B3ED620053046C /* FaveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveCollectionViewCell.swift; sourceTree = "<group>"; };
+		18D78B0326B7F6A70046BE63 /* FaveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveCollectionViewCell.swift; sourceTree = "<group>"; };
 		7549B351E3627B9EDF5F31FB /* Pods-SneakyStores.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakyStores.release.xcconfig"; path = "Target Support Files/Pods-SneakyStores/Pods-SneakyStores.release.xcconfig"; sourceTree = "<group>"; };
 		7CF21425E3C83B99A20F741C /* Pods_SneakyStores.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SneakyStores.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D0E9505D65820D090D9378 /* Pods-SneakyStores.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SneakyStores.debug.xcconfig"; path = "Target Support Files/Pods-SneakyStores/Pods-SneakyStores.debug.xcconfig"; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 				189EAAB126AD6F04005B946B /* Homepage.storyboard */,
 				189EAAB326AD72F4005B946B /* HomepageViewController.swift */,
 				189EAAB526AD730A005B946B /* FaveSneakersViewController.swift */,
-				18B9132E26B3ED620053046C /* FaveCollectionViewCell.swift */,
+				18D78B0326B7F6A70046BE63 /* FaveCollectionViewCell.swift */,
 				189EAAB726AD7331005B946B /* CartViewController.swift */,
 				189EAAB926AD734F005B946B /* ProfileViewController.swift */,
 				1812EED326AF01F500695B0D /* SneakersHeaderCell */,
@@ -511,6 +511,7 @@
 				189EAA7926AB80A9005B946B /* ViewController.swift in Sources */,
 				1812EECC26AEDEFD00695B0D /* SneakersCollectionViewCell.swift in Sources */,
 				189EAAAF26ACCDD7005B946B /* LoginViewModel.swift in Sources */,
+				18D78B0426B7F6A70046BE63 /* FaveCollectionViewCell.swift in Sources */,
 				1812EEE526B1470800695B0D /* HeaderViewModel.swift in Sources */,
 				1812EEE726B1795300695B0D /* SneakersModel.swift in Sources */,
 				18297A3C26B61ABA00702BCA /* ProfileViewModel.swift in Sources */,
@@ -524,7 +525,6 @@
 				189EAA7526AB80A9005B946B /* AppDelegate.swift in Sources */,
 				1812EEC826AEDD3500695B0D /* ForyouCollectionViewCell.swift in Sources */,
 				18297A3526B60E7800702BCA /* Shoe.swift in Sources */,
-				18B9132F26B3ED620053046C /* FaveCollectionViewCell.swift in Sources */,
 				189EAAB426AD72F4005B946B /* HomepageViewController.swift in Sources */,
 				18297A4026B61C5300702BCA /* ProfileService.swift in Sources */,
 				189EAA7726AB80A9005B946B /* SceneDelegate.swift in Sources */,

@@ -31,6 +31,13 @@ class HomepageViewController: UIViewController {
         sneakersCollectionView.register(ShoeHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ShoeHeaderCell")
         sneakersCollectionView.register(ForyouCollectionViewCell.nib(), forCellWithReuseIdentifier: ForyouCollectionViewCell.identifier)
         setupViewModelListeners()
+        
+        vviewModel.completion = {
+            DispatchQueue.main.async {
+                self.vviewModel.get()
+                self.sneakersCollectionView.reloadData()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,8 +126,6 @@ extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 0, left: 20, bottom: 10, right: 20)
     }
-    
-    
     
 }
 
