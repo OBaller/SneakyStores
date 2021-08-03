@@ -439,20 +439,19 @@
                                                 <color key="textColor" red="0.24313725489999999" green="0.85882352939999995" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fnz-2T-7it">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fnz-2T-7it">
                                                 <rect key="frame" x="0.0" y="20" width="220" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="Si9-es-Rnr"/>
                                                     <constraint firstAttribute="height" constant="20" id="gpN-5z-xDF"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="358" id="bGf-Dq-dZW"/>
                                     <constraint firstAttribute="height" constant="40" id="s4F-EU-aVp"/>
                                 </constraints>
                             </stackView>
@@ -510,6 +509,25 @@
                                     <constraint firstAttribute="width" constant="350" id="h9E-Ib-lL8"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7w3-Dg-VIt">
+                                <rect key="frame" x="82" y="716" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.24313725489999999" green="0.85882352939999995" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Erx-8W-G9d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutButton:" destination="fA8-7y-QiZ" eventType="touchUpInside" id="oFK-Fz-NEN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fmR-DN-65Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -525,20 +543,26 @@
                             <constraint firstItem="x2Y-hG-Ys3" firstAttribute="top" secondItem="wwU-PZ-Bee" secondAttribute="bottom" constant="15" id="Hh4-d8-gQb"/>
                             <constraint firstItem="fmR-DN-65Y" firstAttribute="trailing" secondItem="swX-Uu-csX" secondAttribute="trailing" constant="50.5" id="SSl-A8-3x2"/>
                             <constraint firstItem="swX-Uu-csX" firstAttribute="top" secondItem="x2Y-hG-Ys3" secondAttribute="bottom" constant="16" id="a4I-FN-IYV"/>
+                            <constraint firstItem="7w3-Dg-VIt" firstAttribute="leading" secondItem="fmR-DN-65Y" secondAttribute="leading" constant="82" id="e61-jC-VDb"/>
                             <constraint firstItem="fmR-DN-65Y" firstAttribute="trailing" secondItem="wwU-PZ-Bee" secondAttribute="trailing" constant="20" id="f08-Mk-Nhc"/>
                             <constraint firstItem="mok-R3-NQF" firstAttribute="leading" secondItem="Q0k-u5-yjg" secondAttribute="leadingMargin" constant="12" id="i6S-D3-OfJ"/>
                             <constraint firstItem="eQe-UC-dbO" firstAttribute="top" secondItem="bj4-zd-5qi" secondAttribute="bottom" constant="15" id="nya-6j-uYO"/>
                             <constraint firstItem="mok-R3-NQF" firstAttribute="top" secondItem="swX-Uu-csX" secondAttribute="bottom" constant="11.5" id="pdW-zr-gQ3"/>
+                            <constraint firstItem="fmR-DN-65Y" firstAttribute="bottom" secondItem="7w3-Dg-VIt" secondAttribute="bottom" constant="47" id="s0u-43-L13"/>
+                            <constraint firstItem="fmR-DN-65Y" firstAttribute="trailing" secondItem="7w3-Dg-VIt" secondAttribute="trailing" constant="82" id="uA7-M9-UCY"/>
                             <constraint firstItem="bj4-zd-5qi" firstAttribute="leading" secondItem="fmR-DN-65Y" secondAttribute="leading" constant="32" id="vU8-gk-wrN"/>
                             <constraint firstItem="swX-Uu-csX" firstAttribute="leading" secondItem="fmR-DN-65Y" secondAttribute="leading" constant="32" id="xGs-Jg-azx"/>
                             <constraint firstItem="bj4-zd-5qi" firstAttribute="top" secondItem="fmR-DN-65Y" secondAttribute="top" constant="55" id="zQ8-Ut-uwD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="aOL-o3-2Lw">
-                        <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" id="UUh-r6-tjc">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Profile" id="aOL-o3-2Lw"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="MO4-QK-iL7" id="Nxz-l8-Nda"/>
+                        <outlet property="addressTextField" destination="Fnz-2T-7it" id="kgS-S4-yCL"/>
+                        <outlet property="phoneNumberLabel" destination="lDi-hN-Xxj" id="92T-sM-S6L"/>
+                        <outlet property="phoneNumberTextField" destination="LZH-VH-1Ue" id="94Z-hl-d9m"/>
+                        <outlet property="profileName" destination="NrW-dw-9sU" id="WdD-et-o25"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yp7-zX-zSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -590,7 +614,6 @@
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="bell.badge" catalog="system" width="128" height="124"/>
         <image name="cart" catalog="system" width="128" height="102"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
