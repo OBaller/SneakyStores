@@ -8,7 +8,7 @@ import RealmSwift
 import UIKit
 
 
-class FaveSneakersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+class FaveSneakersViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, FaveCollectionViewCellDelegate {
     var viewModel = SneakersViewModel()
     private var data = [LikeModel]()
     let realm = try! Realm()
@@ -40,24 +40,37 @@ class FaveSneakersViewController: UIViewController, UICollectionViewDataSource, 
         else {
             return UICollectionViewCell()
         }
+        cell.delegate = self
        cell.setUp(with: data[indexPath.row])
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.item == 0 {
-            return .init(width: collectionView.frame.size.width, height: 60)
-        } else {
-            return .init(width: 160, height: 250)
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 0, left: 20, bottom: 10, right: 20)
+    }
+    
+}
+
+extension FaveSneakersViewController: SneakersCollectionViewCellDelegate {
+    func didTapAddBtn(with item: SneakersModel) {
+        let choiceItem = LikeModel()
+        choiceItem.itemName = item.itemName
+        choiceItem.designerLogo = item.designerLogo
+        choiceItem.itemPrice = item.itemPrice
+        choiceItem.sneakerImage = item.sneakerImage
+        choiceItem.liked = item.liked
+        RealmService.shared.create(choiceItem)
+        self.collectionView.reloadData()
+    }
+    
+    func didTapRemoveBtn(with item: SneakersModel) {
+        let realm = try! Realm()
+        let data = realm.objects(LikeModel.self).map({ $0 })
+        for i in data{
+            if i.sneakerImage == item.sneakerImage {
+                RealmService.shared.delete(i)
+            }
+        }
+        self.collectionView.reloadData()
     }
     
     
