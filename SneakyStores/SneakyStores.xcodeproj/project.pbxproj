@@ -380,7 +380,7 @@
 				189EAA6D26AB80A9005B946B /* Sources */,
 				189EAA6E26AB80A9005B946B /* Frameworks */,
 				189EAA6F26AB80A9005B946B /* Resources */,
-				E80FD2F21C7381C2BDE49963 /* [CP] Embed Pods Frameworks */,
+				25FA65B3DAD7DD7C3910CDBD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -423,9 +423,9 @@
 			mainGroup = 189EAA6826AB80A9005B946B;
 			packageReferences = (
 				189EAAA026ACBFE8005B946B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				18B9132926B30D130053046C /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				18297A2226B58E9500702BCA /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				18D78B0826B94F7A0046BE63 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				18B9132926B30D130053046C /* XCRemoteSwiftPackageReference "realm-cocoa.git" */,
+				18297A2226B58E9500702BCA /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				18D78B0826B94F7A0046BE63 /* XCRemoteSwiftPackageReference "ProgressHUD.git" */,
 			);
 			productRefGroup = 189EAA7226AB80A9005B946B /* Products */;
 			projectDirPath = "";
@@ -456,7 +456,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E80FD2F21C7381C2BDE49963 /* [CP] Embed Pods Frameworks */ = {
+		25FA65B3DAD7DD7C3910CDBD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -754,7 +754,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		18297A2226B58E9500702BCA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		18297A2226B58E9500702BCA /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -770,7 +770,7 @@
 				minimumVersion = 6.5.6;
 			};
 		};
-		18B9132926B30D130053046C /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		18B9132926B30D130053046C /* XCRemoteSwiftPackageReference "realm-cocoa.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
 			requirement = {
@@ -778,7 +778,7 @@
 				minimumVersion = 10.11.0;
 			};
 		};
-		18D78B0826B94F7A0046BE63 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+		18D78B0826B94F7A0046BE63 /* XCRemoteSwiftPackageReference "ProgressHUD.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
 			requirement = {
@@ -791,7 +791,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		18297A2326B58E9500702BCA /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18297A2226B58E9500702BCA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 18297A2226B58E9500702BCA /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 		189EAAA126ACBFE9005B946B /* IQKeyboardManagerSwift */ = {
@@ -801,17 +801,17 @@
 		};
 		18B9132A26B30D130053046C /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18B9132926B30D130053046C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 18B9132926B30D130053046C /* XCRemoteSwiftPackageReference "realm-cocoa.git" */;
 			productName = Realm;
 		};
 		18B9132C26B30D130053046C /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18B9132926B30D130053046C /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 18B9132926B30D130053046C /* XCRemoteSwiftPackageReference "realm-cocoa.git" */;
 			productName = RealmSwift;
 		};
 		18D78B0926B94F7A0046BE63 /* ProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18D78B0826B94F7A0046BE63 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			package = 18D78B0826B94F7A0046BE63 /* XCRemoteSwiftPackageReference "ProgressHUD.git" */;
 			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
